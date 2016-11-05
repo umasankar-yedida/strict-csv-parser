@@ -37,12 +37,12 @@ public final class CSVWriter implements Flushable, Closeable {
      *
      * @param filePath
      *            the filepath to which the file.
-     * @param format
-     *            the CSV format. Must not be null.
+     * @param delimeter
+     *            the character in between the column values included
+     * @param separator
+     * 			  the character to separate the columns
      * @throws IOException
      *             thrown if the optional header cannot be printed.
-     * @throws IllegalArgumentException
-     *             thrown if the parameters of the format are inconsistent or if either out or format are null.
      */
     public CSVWriter(String filePath, char delimeter, char separator) throws IOException {
     	this.out = new FileWriter(filePath);
@@ -59,12 +59,12 @@ public final class CSVWriter implements Flushable, Closeable {
      *
      * @param out
      *            stream to which to print. Must not be null.
-     * @param format
-     *            the CSV format. Must not be null.
+     * @param delimeter
+     *            the character in between the column values included
+     * @param separator
+     * 			  the character to separate the columns
      * @throws IOException
      *             thrown if the optional header cannot be printed.
-     * @throws IllegalArgumentException
-     *             thrown if the parameters of the format are inconsistent or if either out or format are null.
      */
     public CSVWriter(final Appendable out, char delimeter, char separator) throws IOException {
     	this.out = out;
@@ -311,8 +311,8 @@ public final class CSVWriter implements Flushable, Closeable {
      * separator to the output after printing the record, so there is no need to call {@link #println()}.
      * </p>
      *
-     * @param values
-     *            values to output.
+     * @param record
+     *            {@link CSVRecord} object which contains column values
      * @throws IOException
      *             If an I/O error occurs
      */

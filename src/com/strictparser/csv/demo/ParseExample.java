@@ -23,7 +23,7 @@ public class ParseExample {
 	}
 
 	public static void readCSV()throws Exception{
-		CSVParser parser = new CSVParser(new FileReader(new File("C:\\Users\\uyedida\\Desktop\\example.csv")), DELIM_COMMA, SEPARATOR_DOUBLE_QUOTE, true, true);
+		CSVParser parser = new CSVParser(new FileReader(new File("C:\\Users\\uyedida\\Desktop\\test-blru.csv")));
 		
 		long startTime = System.currentTimeMillis();
 		

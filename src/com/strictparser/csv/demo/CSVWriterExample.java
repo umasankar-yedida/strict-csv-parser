@@ -22,18 +22,19 @@ class Tester extends Thread {
 		//String fileName = "C:\\Users\\uyedida\\Desktop\\new.csv";
 		//FileWriter fileWriter = new FileWriter(filePath);
 		String[] FILE_HEADER = {
-			"Student_Id",
-			"Student_No",
-			"Student_Name",
+			"Vendor_Id",
+			"Vendor_No",
+			"Vendor_Name",
 			"Address",
 			"Postal_Code",
 			"Phone_No",
-			"Registration_No",
-			"Company",
-			"Company_Address",
-			"Company_Postal_Code",
+			"GST_Registration_No",
+			"Division_Company",
+			"Division_Address",
+			"Division_Postal_Code",
+			"OU_Name"
 		};
-		CSVParser parser = new CSVParser(new FileReader(new File("C:\\Users\\uyedida\\Desktop\\Students1.csv")), ',', '"', true, false);
+		CSVParser parser = new CSVParser(new FileReader(new File("C:\\Users\\uyedida\\Desktop\\vendors1.csv")), ',', '"', true, false);
 		List<CSVRecord> records = parser.getRecords();
 		
 		CSVWriter csvFileWriter = new CSVWriter(filePath, ',', '"');

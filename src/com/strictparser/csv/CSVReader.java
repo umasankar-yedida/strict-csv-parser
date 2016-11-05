@@ -18,7 +18,7 @@ import static com.strictparser.csv.CSVConstants.LF;
  */
 
 class CSVReader extends BufferedReader {
-		
+	
 	@SuppressWarnings("unused")
 	private long currPosition;
 	private long lineCounter;
